@@ -1,13 +1,9 @@
 {
-  "name": "video-generator-api",
-  "version": "1.0.0",
-  "main": "api/progress.js",
-  "dependencies": {
-    "express": "^4.18.2",
-    "fluent-ffmpeg": "^2.1.2",
-    "multer": "^1.4.5-lts.1"
-  },
-  "scripts": {
-    "start": "node api/progress.js"
-  }
+  "version": 2,
+  "builds": [
+    { "src": "api/progress.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/progress", "dest": "api/progress.js" }
+  ]
 }
